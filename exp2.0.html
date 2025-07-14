@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <center><title>Team Members</title></center>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f2f5;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      width: 280px;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      color: #333;
+    }
+
+    .card p {
+      margin: 5px 0;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Our Team</h1>
+  <div class="container" id="cardsContainer"></div>
+
+  <script>
+    // Your own data
+    const teamMembers = [
+      {
+        name: "Dhayanish S",
+        regNo: "2023PECCS733",
+        role: "Developer",
+        domain: "AI & ML"
+      },
+
+      {
+        name: "Dhilshan S D",
+        regNo: "2023PECCS734",
+        role: "Research Analyst",
+        domain: "AI & ML"
+      },
+  {
+        name: "Harish R",
+        regNo: "2023PECCS781",
+        role: "Research Analyst",
+        domain: "AI & ML"
+      },
+  {
+        name: "Dharani G",
+        regNo: "2023PECCS731",
+        role: "Research Analyst",
+        domain: "AI & ML"
+      },  {
+        name: "Harish Prasadh S S",
+        regNo: "2023PECCS781",
+        role: "Research Analyst",
+        domain: "AI & ML"
+      },  {
+        name: "Chandru",
+        regNo: "2023PECMECH900",
+        role: "Mechanic",
+        domain: "Mech"
+      },
+ {
+        name: "dommanueVel",
+        regNo: "2023PECMECH900",
+        role: "Mechanic",
+        domain: "Mech"
+      },
+
+    ];
+
+    // Display cards
+    const container = document.getElementById('cardsContainer');
+
+    teamMembers.forEach(member => {
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.innerHTML = `
+        <h3>${member.name}</h3>
+        <p><strong>Reg No:</strong> ${member.regNo}</p>
+        <p><strong>Role:</strong> ${member.role}</p>
+        <p><strong>Domain:</strong> ${member.domain}</p>
+      `;
+      container.appendChild(card);
+    });
+  </script>
+
+</body>
+</html>
